@@ -2,7 +2,7 @@
 
 # Quadratic Equation Solver
 
-## Задача: 
+### Задача: 
 - Написать программу, которая будет решать квадратное уравнение
 - Добавить документацию (Doxygen)
 - Написать unittest`ы
@@ -16,3 +16,6 @@
 - [Markdown](https://github.com/sandino/Markdown-Cheatsheet)
 - [Makefile](https://habr.com/ru/post/155201)
 - [Unittest](https://habr.com/ru/post/169381)
+
+
+##### Автор: Яценко Кирилл (kirillyat)
