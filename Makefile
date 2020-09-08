@@ -1,0 +1,2 @@
+all: QuadraticEquationSolver.o
+    g++
