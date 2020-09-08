@@ -27,7 +27,17 @@ int QuadraticEquationSolver(double a, double b, double c,
 void foo(double a, double b, double c);
 
 
+/*!
+    \author kirillyat
+    \brief Function to compare double to zero
+    \param[in] a Doudle value
+    \return True if value is near to zero
+*/
+bool is_zero(double d);
+
+
 // Constants
-enum {
-    INF_ROOTS = -1 // <Infinity
+struct Constants{
+    int INF = -1;             // <Infinity
+    double EPS = 0.000000000000001; // <Zero
 };
