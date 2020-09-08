@@ -3,7 +3,7 @@
 #include <cassert>
 #include <cstdio>
 #include <cstdlib>
-#include "QuadraticEquation.hpp"
+#include "QuadraticEquation.h"
 
 
 
@@ -14,7 +14,7 @@ int QuadraticEquationSolver(double a, double b, double c,
 
     if (is_zero(a)) {
         if (is_zero(b)) {
-            return (is_zero(c)) ? Constants:INF: 0;
+            return (is_zero(c)) ? Constants.INF: 0;
         } else { /* if (b != 0) */
             *root1 = -c/b;
             return 1;
@@ -42,7 +42,7 @@ void foo(double a, double b, double c)
     std::cout << "INPUT : " << a << "*X^2 + " << b << "*X + " << c << std::endl;
 
     switch (QuadraticEquationSolver(a, b, c, &x, &y)) {
-        case Constants:INF:
+        case Constants.INF:
             std::cout << "Infinity amount of roots" << std::endl;
         break;
         case 0:
@@ -60,9 +60,8 @@ void foo(double a, double b, double c)
 
 bool is_zero(double d)
 {
-    return std::fabs(d) < Constants:EPS;
+    return std::fabs(num) < Constants.EPS;
 }
-
 
 
 int main(int argc, char const *argv[]) {
