@@ -11,7 +11,7 @@
 
 
 ### Ссылки на полезные ресурсы:
-- [Assert](https://habr.com/ru/post/141080){:target="_blank"}
+- [Assert](https://habr.com/ru/post/141080) {:target="_blank"}
 - [Doxygen](https://habr.com/ru/post/252101){:target="_blank"}
 - [Markdown](https://github.com/sandino/Markdown-Cheatsheet){:target="_blank"}
 - [Makefile](https://habr.com/ru/post/155201){:target="_blank"}
