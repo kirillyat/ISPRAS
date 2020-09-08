@@ -1,3 +1,5 @@
+<img src="http://talisman.ispras.ru/wp-content/uploads/2019/01/logo_RU.jpg" alt="drawing" width="200"/>
+
 # Quadratic Equation Solver
 
 ## Задача: 
@@ -5,4 +7,3 @@
 - Добавить документацию
 - Написать unittest`ы
 
-![](http://talisman.ispras.ru/wp-content/uploads/2019/01/logo_RU.jpg)
