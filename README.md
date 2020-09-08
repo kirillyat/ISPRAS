@@ -18,4 +18,4 @@
 - [Unittest](https://habr.com/ru/post/169381)
 
 
-##### Автор: Яценко Кирилл (kirillyat)
+##### Автор: Яценко Кирилл Сергеевич (kirillyat)
