@@ -38,6 +38,6 @@ bool is_zero(double d);
 
 // Constants
 struct Constants{
-    int INF = -1;             // <Infinity
+    int INF = -1;                   // <Infinity
     double EPS = 0.000000000000001; // <Zero
 };
