@@ -1,8 +1,12 @@
-#include <cmath>
-#include <cstdlib>
-#include <iostream>
-#include <cstdio>
-#include <cstdlib>
+#ifndef QUARDRATIC_EQUATION_H
+#define QUARDRATIC_EQUATION_H
+
+
+// Constants
+struct{
+    int INF = -1;       // < Infinity
+    double EPS = 1e-6;  // < Zero
+} Constants;
 
 /*!
     \author kirillyat
@@ -36,8 +40,4 @@ void foo(double a, double b, double c);
 bool is_zero(double d);
 
 
-// Constants
-struct Constants{
-    int INF = -1;                   // <Infinity
-    double EPS = 0.000000000000001; // <Zero
-};
+#endif // QUARDRATIC_EQUATION_H
