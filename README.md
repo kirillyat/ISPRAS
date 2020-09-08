@@ -16,11 +16,5 @@
 - <a href="https://github.com/sandino/Markdown-Cheatsheet" target="_blank">Markdown</a>
 - <a href="https://habr.com/ru/post/155201" target="_blank">Makefile</a>
 - <a href="https://habr.com/ru/post/169381" target="_blank">Unittest</a>
-- [Assert](https://habr.com/ru/post/141080) {:target="_blank"}
-- [Doxygen](https://habr.com/ru/post/252101){:target="_blank"}
-- [Markdown](https://github.com/sandino/Markdown-Cheatsheet){:target="_blank"}
-- [Makefile](https://habr.com/ru/post/155201){:target="_blank"}
-- [Unittest](https://habr.com/ru/post/169381){:target="_blank"}
-
 
 ##### Автор: Яценко Кирилл Сергеевич (kirillyat)
