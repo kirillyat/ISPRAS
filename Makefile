@@ -1,5 +1,7 @@
 all:
-	g++ QuadraticEquation.cpp -o QuadraticEquation.o
+	g++ QuadraticEquation.cpp main.cpp -o QE
+
+qe: main.cpp
 
 QuadraticEquation.o: QuadraticEquation.cpp
 	g++ -c -Wall QuadraticEquation.cpp
