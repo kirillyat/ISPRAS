@@ -3,7 +3,7 @@
 
 
 // Constants
-const int INF = -1;     // < Infinity
+const int INF = -1;       // < Infinity
 const double EPS = 1e-6;  // < Zero
 
 
