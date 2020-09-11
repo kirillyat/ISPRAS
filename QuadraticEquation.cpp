@@ -3,8 +3,7 @@
 #include <cassert>
 #include <cstdio>
 #include <cstdlib>
-#include "QuadraticEquation.h"
-
+#include "QuadraticEquation.hpp"
 
 
 int QuadraticEquationSolver(double a, double b, double c,
@@ -12,9 +11,9 @@ int QuadraticEquationSolver(double a, double b, double c,
 {
     double D;
 
-    if (is_zero(a)) {
-        if (is_zero(b)) {
-            return (is_zero(c)) ? Constants.INF: 0;
+    if (isZero(a)) {
+        if (isZero(b)) {
+            return (isZero(c)) ? INF: 0;
         } else { /* if (b != 0) */
             *root1 = -c/b;
             return 1;
@@ -23,7 +22,7 @@ int QuadraticEquationSolver(double a, double b, double c,
         D = b*b - 4*a*c;
         if (D < 0) {
             return 0;
-        } else if (is_zero(D)) {
+        } else if (isZero(D)) {
             *root1 = -b/(2*a);
             return 1;
         } else { /* if(D != 0) */
@@ -35,40 +34,80 @@ int QuadraticEquationSolver(double a, double b, double c,
 }
 
 
-void foo(double a, double b, double c)
+
+void PrintEquation(double a, double b, double c)
 {
-    double x, y;
+    bool af = notZero(a),
+         bf = notZero(b),
+         cf = notZero(c);
 
-    std::cout << "INPUT : " << a << "*X^2 + " << b << "*X + " << c << std::endl;
+    if (af) {
+        std::cout << a << "x^2 ";
+        if (bf || cf)
+            std::cout << "+ ";
+    }
+    if (bf) {
+        std::cout << b << "x ";
+        if (cf)
+            std::cout << "+ ";
+    }
+    if (cf) {
+        std::cout << c << " = 0";
+    }
+}
 
-    switch (QuadraticEquationSolver(a, b, c, &x, &y)) {
-        case Constants.INF:
+
+
+
+void PrintAnalysis(int AmountOfRoots,
+                   const double *root1,
+                   const double *root2)
+{
+    switch (AmountOfRoots) {
+        case INF:
             std::cout << "Infinity amount of roots" << std::endl;
         break;
         case 0:
             std::cout << "No roots" << std::endl;
         break;
         case 1:
-            std::cout << "Only one root: " << x << std::endl;
+            std::cout << "Only one root: " << root1 << std::endl;
         break;
         case 2:
-            std::cout << "Two roots: " << x << " and " << y << std::endl;
+            std::cout << "Two roots: " << root1 << " and " << root2 << std::endl;
         break;
     }
 }
 
 
-bool is_zero(double d)
+bool  isZero(double d)
 {
-    return std::fabs(num) < Constants.EPS;
+    return std::fabs(d) < EPS;
+}
+
+
+bool notZero(double d)
+{
+    return !isZero(d);
 }
 
 
 int main(int argc, char const *argv[]) {
 
-    double a, b, c;
+    double a, b, c, root1, root2;
+    int n;
+
     std::cin >> a >> b >> c;
-    foo(a, b, c);
+
+    std::cout << "INPUT  : ";
+    PrintEquation(a, b, c);
+    std::cout << std::endl;
+
+    n = QuadraticEquationSolver(a, b, c, &root1, &root2);
+
+    std::cout << "OUTPUT : ";
+    PrintAnalysis(n, &root1, &root2);
+    std::cout << std::endl;
 
     return 0;
 }

@@ -3,10 +3,11 @@
 
 
 // Constants
-struct{
-    int INF = -1;       // < Infinity
-    double EPS = 1e-6;  // < Zero
-} Constants;
+const int INF = -1;     // < Infinity
+const double EPS = 1e-6;  // < Zero
+
+
+
 
 /*!
     \author kirillyat
@@ -23,12 +24,24 @@ int QuadraticEquationSolver(double a, double b, double c,
 
 /*!
     \author kirillyat
-    \brief Function to print solution of quadratic equation
+    \brief Function to print equation
     \param[in] a Coefficient at X^2
     \param[in] b Coefficient at X
     \param[in] c Free member of the equation
 */
-void foo(double a, double b, double c);
+void PrintEquation(double a, double b, double c);
+
+
+/*!
+    \author kirillyat
+    \brief Function to print analysis of solution
+    \param[in] a Coefficient at X^2
+    \param[in] b Coefficient at X
+    \param[in] c Free member of the equation
+*/
+void PrintAnalysis(int AmountOfRoots,
+                   const double *root1,
+                   const double *root2);
 
 
 /*!
@@ -37,7 +50,15 @@ void foo(double a, double b, double c);
     \param[in] a Doudle value
     \return True if value is near to zero
 */
-bool is_zero(double d);
+bool isZero(double d);
 
+
+/*!
+    \author kirillyat
+    \brief Function to compare double to zero
+    \param[in] a Doudle value
+    \return False if value is near to zero
+*/
+bool notZero(double d);
 
 #endif // QUARDRATIC_EQUATION_H
