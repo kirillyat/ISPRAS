@@ -56,11 +56,11 @@ void PrintEquation(double a, double b, double c)
     if (cf) {
         std::cout << c;
     }
-    
-    if (!(af && bf && cf))
+
+    if (!(af || bf || cf))
     	std::cout << "0";
 
-    std::cout << c << " = 0";
+    std::cout << " = 0";
 }
 
 
