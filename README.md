@@ -2,7 +2,7 @@
 
 # Quadratic Equation Solver
 
-### ЗАПУСК: 
+### Запуск: 
 ##### make  и  ./QE
 
 ### Задача:
