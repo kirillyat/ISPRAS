@@ -4,6 +4,9 @@
 
 int main(int argc, char const *argv[]) {
 
+    std::cout.setf(std::ios::fixed);
+    std::cout.precision(0);
+
     double a, b, c, root1, root2;
     int n;
 

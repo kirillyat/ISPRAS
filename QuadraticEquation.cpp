@@ -70,6 +70,10 @@ void PrintAnalysis(int AmountOfRoots,
                    const double *root1,
                    const double *root2)
 {
+    std::cout.setf(std::ios::fixed);
+    std::cout.precision(3);
+
+
     switch (AmountOfRoots) {
         case INF:
             std::cout << "Infinity amount of roots" << std::endl;
@@ -78,10 +82,10 @@ void PrintAnalysis(int AmountOfRoots,
             std::cout << "No roots" << std::endl;
         break;
         case 1:
-            std::cout << "Only one root: " << root1 << std::endl;
+            std::cout << "Only one root: " << *root1 << std::endl;
         break;
         case 2:
-            std::cout << "Two roots: " << root1 << " and " << root2 << std::endl;
+            std::cout << "Two roots: " << *root1 << " and " << *root2 << std::endl;
         break;
     }
 }
