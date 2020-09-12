@@ -70,9 +70,6 @@ void PrintAnalysis(int AmountOfRoots,
                    const double *root1,
                    const double *root2)
 {
-
-
-
     switch (AmountOfRoots) {
         case INF:
             std::cout << "Infinity amount of roots" << std::endl;
