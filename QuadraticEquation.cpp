@@ -70,8 +70,7 @@ void PrintAnalysis(int AmountOfRoots,
                    const double *root1,
                    const double *root2)
 {
-    std::cout.setf(std::ios::fixed);
-    std::cout.precision(3);
+
 
 
     switch (AmountOfRoots) {

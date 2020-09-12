@@ -35,9 +35,9 @@ void PrintEquation(double a, double b, double c);
 /*!
     \author kirillyat
     \brief Function to print analysis of solution
-    \param[in] a Coefficient at X^2
-    \param[in] b Coefficient at X
-    \param[in] c Free member of the equation
+    \param[in] AmountOfRoots Amount Of Roots
+    \param[in] root1 Pointer to the root #1
+    \param[in] root2 Pointer to the root #2
 */
 void PrintAnalysis(int AmountOfRoots,
                    const double *root1,
