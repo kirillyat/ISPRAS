@@ -2,6 +2,11 @@
 
 ## Репозиторий для работ по курсу С/С++ от ИСП РАН
 
+- <a href="https://github.com/kirillyat/ISPRAS/tree/master/QuadraticEquation" target="_blank">Квадратное уравнение</a>
+- <a href="https://github.com/kirillyat/ISPRAS/tree/master/Onegin" target="_blank">Онегин & C++</a>
+
 #### Студент: Яценко Кирилл Сергеевич (@kirillyat)
 
 #### Лектор: Дединский Илья Рудольфович
+
+
