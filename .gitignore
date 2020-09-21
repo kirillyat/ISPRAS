@@ -1,11 +1,8 @@
 .DS_Store
 html/
 latex/
+QuadraticEquation/QE
 *.pdf
 *.zip
 *.log
-QuadraticEquation/QE
-
-
-
-
+*.dSYM/	
