@@ -1,9 +1,9 @@
 #include "QuadraticEquation.hpp"
 #include <iostream>
+#include <cstring>
 
-
-int main(int argc, char const *argv[]) {
-
+void demo()
+{
     std::cout.setf(std::ios::fixed);
     std::cout.precision(0);
 
@@ -24,5 +24,20 @@ int main(int argc, char const *argv[]) {
     PrintAnalysis(n, &root1, &root2);
     std::cout << std::endl;
 
+    return;
+}
+
+void tests ()
+{
+
+}
+
+
+int main(int argc, char *argv[])
+{
+    if (strcmp(argv[1], "-test") == 0)
+        tests();
+    else
+        demo();
     return 0;
 }

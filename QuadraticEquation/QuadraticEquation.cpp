@@ -6,6 +6,17 @@
 #include "QuadraticEquation.hpp"
 
 
+bool  isZero(double d)
+{
+    return std::fabs(d) < EPS;
+}
+
+bool notZero(double d)
+{
+    return !isZero(d);
+}
+
+
 int QuadraticEquationSolver(double a, double b, double c,
                             double *root1, double *root2)
 {
@@ -24,10 +35,16 @@ int QuadraticEquationSolver(double a, double b, double c,
             return 0;
         } else if (isZero(D)) {
             *root1 = -b/(2*a);
+            if (isZero(*root1))
+                *root1 = 0;
             return 1;
         } else { /* if(D != 0) */
             *root1 = (-b + sqrt(D))/(2*a);
             *root2 = (-b - sqrt(D))/(2*a);
+            if (isZero(*root1))
+                *root1 = 0;
+            if (isZero(*root2))
+                *root2 = 0;
             return 2;
         }
     }
@@ -87,16 +104,4 @@ void PrintAnalysis(int AmountOfRoots,
             std::cout << "Two roots: " << *root1 << " and " << *root2 << std::endl;
         break;
     }
-}
-
-
-bool  isZero(double d)
-{
-    return std::fabs(d) < EPS;
-}
-
-
-bool notZero(double d)
-{
-    return !isZero(d);
 }
