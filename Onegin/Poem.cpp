@@ -1,25 +1,19 @@
+#include "Poem.hpp"
 
-#include "Onegin.hpp"
 
 
-/*
 
-class text {
-private:
-    FILE* InputText;
-    FILE* OutputText;
-public:
 
+Poem::Poem(char* FileName) {
+    file = fopen(FileName, "r");
+    if (file == NULL)
+        std::cerr << "[POEM INIT] WRONG FILE NAME" << '\n';
+
+    NumberOfLines = fseek(file, 0, SEEK_END);
+    fseek(file,0,SEEK_SET);
+
+    fread(text, )
 }
-
-text::text()
-{
-    InputText = fopen("onegin.txt", 'r');
-
-
-}
-
-*/
 
 int FrontStringCompare(char* str1, char* str2)
 {

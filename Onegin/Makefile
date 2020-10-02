@@ -1,2 +1,2 @@
 all:
-	g++ Onegin.cpp main.cpp -o One
+	g++ Poem.cpp main.cpp -o One
