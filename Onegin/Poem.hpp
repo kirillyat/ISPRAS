@@ -17,7 +17,7 @@ private:
     const char* text;
     char** lines
     FILE* file;
-    int NumberOfLines;
+    long NumberOfLines;
     Poem();
 public:
     Poem(char* FileName);
