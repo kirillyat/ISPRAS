@@ -6,14 +6,14 @@
 #include "QuadraticEquation.hpp"
 
 
-bool  isZero(double d)
+bool  isZero(double value)
 {
-    return std::fabs(d) < EPS;
+    return std::fabs(value) < EPS;
 }
 
-bool notZero(double d)
+bool notZero(double value)
 {
-    return !isZero(d);
+    return std::fabs(value) > EPS;
 }
 
 
@@ -36,15 +36,15 @@ int QuadraticEquationSolver(double a, double b, double c,
         } else if (isZero(D)) {
             *root1 = -b/(2*a);
             if (isZero(*root1))
-                *root1 = 0;
+                *root1 = 0.0;
             return 1;
-        } else { /* if(D != 0) */
+        } else { /* if(D > 0) */
             *root1 = (-b + sqrt(D))/(2*a);
             *root2 = (-b - sqrt(D))/(2*a);
             if (isZero(*root1))
-                *root1 = 0;
+                *root1 = 0.0;
             if (isZero(*root2))
-                *root2 = 0;
+                *root2 = 0.0;
             return 2;
         }
     }

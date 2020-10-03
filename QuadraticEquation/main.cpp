@@ -5,7 +5,7 @@
 void demo()
 {
     std::cout.setf(std::ios::fixed);
-    std::cout.precision(0);
+    std::cout.precision(1);
 
     double a, b, c, root1, root2;
     int n;
@@ -35,9 +35,10 @@ void tests ()
 
 int main(int argc, char *argv[])
 {
-    if (strcmp(argv[1], "-test") == 0)
-        tests();
-    else
+    if (argv[1] == NULL)
         demo();
+    else if (strcmp(argv[1], "-test") == 0)
+        tests();
+
     return 0;
 }

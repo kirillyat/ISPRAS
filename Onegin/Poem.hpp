@@ -1,12 +1,5 @@
-#ifndef POEM_LIB
-#define POEM_LIB
-
-#include <iostream>
-#include <cstring>
-#include <cctype>
-#include <fstream>
-#include <cstdio>
-#include <sys/mman.h>
+#ifndef POEM_HPP
+#define POEM_HPP
 
 typedef int (*StringCompareMethod)(char[], char[]);
 int FrontStringCompare(char* str1, char* str2);
@@ -27,4 +20,4 @@ public:
     int  WriteToFile(char* FileName);
 }
 
-#endif //POEM_LIB
+#endif //POEM_HPP

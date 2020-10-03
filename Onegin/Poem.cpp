@@ -1,8 +1,10 @@
 #include "Poem.hpp"
-
-
-
-
+#include <iostream>
+#include <cstring>
+#include <cctype>
+#include <fstream>
+#include <cstdio>
+#include <sys/mman.h>
 
 Poem::Poem(char* FileName) {
     file = fopen(FileName, "r");
@@ -13,6 +15,10 @@ Poem::Poem(char* FileName) {
     fseek(file,0,SEEK_SET);
 
     fread(text, )
+}
+Poem::~Poem() {
+    fclose(file);
+
 }
 
 int FrontStringCompare(char* str1, char* str2)
@@ -36,7 +42,7 @@ int FrontStringCompare(char* str1, char* str2)
     return str1[index1] - str2[index2];
 }
 
-/*
+
 int BackStringCompare(char* str1, char* str2)
 {
     int index1 = length(str1),
@@ -57,4 +63,3 @@ int BackStringCompare(char* str1, char* str2)
     }
     return str1[index1] - str2[index2];
 }
-*/
